@@ -155,7 +155,7 @@
         <geometry>
           <mesh filename="package://hey5_description/meshes/finger_abd${vis_suffix}.stl" scale="1 1 ${reflect}" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -197,7 +197,7 @@
         <geometry>
           <mesh filename="package://hey5_description/meshes/thumb_abd${vis_suffix}.stl" scale="1 1 ${reflect}" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -240,7 +240,7 @@
         <geometry>
           <box size="${finger_d2} 0.002 0.012" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -285,7 +285,7 @@
         <geometry>
           <mesh filename="package://hey5_description/meshes/finger_flex_short${vis_suffix}.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -330,7 +330,7 @@
         <geometry>
           <mesh filename="package://hey5_description/meshes/finger_flex_tip${vis_suffix}.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
