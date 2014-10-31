@@ -43,7 +43,7 @@
     - name: Finger name. Finger links and joints are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
-    - origin: XML block containing the pose of the first finger link with respect to its parent
+    - origin: XML block containing the pose of the first finger joint with respect to its parent
   -->
   <xacro:macro name="finger" params="name parent reflect *origin mimic_source">
     <!--Abductor-->
@@ -93,7 +93,7 @@
     - name: Finger name. Finger links and joints are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
-    - origin: XML block containing the pose of the first finger link with respect to its parent
+    - origin: XML block containing the pose of the first finger joint with respect to its parent
   -->
   <xacro:macro name="thumb" params="name parent reflect *origin mimic_source">
     <!--Abductor-->
@@ -131,7 +131,7 @@
     - name: The created link and joint are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
-    - origin: XML block containing the pose of the link with respect to its parent
+    - origin: XML block containing the pose of the joint with respect to its parent
   -->
   <xacro:macro name="finger_abd" params="name parent reflect *origin">
     <joint name="${name}_joint" type="revolute">
@@ -173,7 +173,7 @@
     - name: The created link and joint are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
-    - origin: XML block containing the pose of the link with respect to its parent
+    - origin: XML block containing the pose of the joint with respect to its parent
   -->
   <xacro:macro name="thumb_abd" params="name parent reflect *origin">
     <joint name="${name}_joint" type="revolute">
@@ -216,7 +216,7 @@
     - name: The created link and joint are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
-    - origin: XML block containing the pose of the link with respect to its parent
+    - origin: XML block containing the pose of the joint with respect to its parent
   -->
   <xacro:macro name="finger_flex_virtual" params="name parent reflect *origin *mimic" >
     <joint name="${name}_joint" type="revolute">
@@ -260,7 +260,7 @@
     - name: The created link and joint are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
-    - origin: XML block containing the pose of the link with respect to its parent
+    - origin: XML block containing the pose of the joint with respect to its parent
   -->
   <xacro:macro name="finger_flex_short" params="name parent reflect *origin *mimic">
     <joint name="${name}_joint" type="revolute">
@@ -305,7 +305,7 @@
     - name: The created link and joint are prepended with 'name_'
     - parent: Parent link
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
-    - origin: XML block containing the pose of the link with respect to its parent
+    - origin: XML block containing the pose of the joint with respect to its parent
   -->
   <xacro:macro name="finger_flex_tip" params="name parent reflect *origin *mimic">
     <joint name="${name}_joint" type="revolute">

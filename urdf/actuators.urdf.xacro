@@ -48,7 +48,16 @@
     </xacro:actuator_impl>
   </xacro:macro>
 
-  <!-- Common actuator implementation -->
+  <!--
+    Common actuator implementation. Create a joint/link pair representing an actuator.
+
+    Parameters:
+    - name: Actuator name. The created link and joint are prepended with 'name_'
+    - parent: Parent link
+    - origin: XML block containing the pose of the actuator joint with respect to its parent
+    - limit: XML block containing the joint limit specification
+    - safety_controller: XML block containing the soft joint limits specification
+  -->
   <xacro:macro name="actuator_impl" params="name parent *origin *limit *safety_controller">
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
