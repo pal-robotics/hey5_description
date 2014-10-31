@@ -10,6 +10,6 @@
 
 <robot>
  <material name="Hey5DarkGrey">
-   <color rgba="0.2 0.2 0.2 1.0"/>
+   <color rgba="0.1 0.1 0.1 1.0"/>
  </material>
 </robot>
