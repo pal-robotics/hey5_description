@@ -57,10 +57,10 @@
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
-    <xacro:finger_flex_short parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
+    <xacro:finger_flex parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
-    </xacro:finger_flex_short>
+    </xacro:finger_flex>
 
     <!--Second flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_1_link" name="${name}_virtual_2" reflect="${reflect}">
@@ -68,10 +68,10 @@
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
-    <xacro:finger_flex_short parent="${name}_virtual_2_link" name="${name}_flex_2" reflect="${reflect}">
+    <xacro:finger_flex parent="${name}_virtual_2_link" name="${name}_flex_2" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
-    </xacro:finger_flex_short>
+    </xacro:finger_flex>
 
     <!--Third flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_2_link" name="${name}_virtual_3" reflect="${reflect}">
@@ -107,10 +107,10 @@
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
-    <xacro:finger_flex_short parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
+    <xacro:finger_flex parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
       <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
-    </xacro:finger_flex_short>
+    </xacro:finger_flex>
 
     <!--Second flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_1_link" name="${name}_virtual_2" reflect="${reflect}">
@@ -262,7 +262,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
     - origin: XML block containing the pose of the joint with respect to its parent
   -->
-  <xacro:macro name="finger_flex_short" params="name parent reflect *origin *mimic">
+  <xacro:macro name="finger_flex" params="name parent reflect *origin *mimic">
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
@@ -283,14 +283,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://hey5_description/meshes/finger_flex_short${vis_suffix}.stl" />
+          <mesh filename="package://hey5_description/meshes/finger_flex${vis_suffix}.stl" />
         </geometry>
         <material name="Hey5DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://hey5_description/meshes/finger_flex_short_collision.stl" />
+          <mesh filename="package://hey5_description/meshes/finger_flex_collision.stl" />
         </geometry>
       </collision>
     </link>
