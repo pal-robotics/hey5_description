@@ -77,6 +77,7 @@
     </xacro:mrl_actuator>
 
     <!--Fingers-->
+    <!-- TODO: Add grasp hack? -->
     <xacro:thumb parent="${name}_palm_link" name="${name}_thumb" reflect="${reflect}" mimic_source="${name}_thumb_joint">
       <origin xyz="0.0911 0.0132 ${reflect * 0.038}" rpy="0 ${-reflect * 65 * deg_to_rad} 0" />
     </xacro:thumb>
