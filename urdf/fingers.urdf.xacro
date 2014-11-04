@@ -33,7 +33,7 @@
     Set to "" to use separate visualization mesh, or to "_collision" to use
     collision meshes for visualization as well
   -->
-  <xacro:property name="vis_suffix"  value="" />
+  <xacro:property name="vis_suffix"  value="_collision" />
 
   <!--
     Create one non-thumb finger with one abduction/adduction joint and three
