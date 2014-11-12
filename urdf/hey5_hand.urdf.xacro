@@ -14,26 +14,12 @@
   <xacro:include filename="$(find hey5_description)/urdf/fingers.urdf.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/palm.urdf.xacro" />
 
-  <!--Command source. TODO: Remove!-->
-  <xacro:macro name="cmd_source" params="name parent *origin">
-    <joint name="${name}_joint" type="revolute">
-      <parent link="${parent}" />
-      <child link="${name}_link" />
-      <insert_block name="origin" />
-      <axis xyz="0 0 1" />
-      <limit lower="0.0" upper="1.0" effort="10.0" velocity="20.0" /> <!--TODO: Check-->
-      <!--TODO: Add joint dynamics?-->
-    </joint>
-
-    <link name="${name}_link">
-      <inertial>
-        <mass value="0.01" /> <!--TODO: can we make it zero and still have a stable dynamic simulation?-->
-        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-      </inertial>
-    </link>
-  </xacro:macro>
-
-
+  <!--Constants-->
+  <xacro:property name="thumb_act_flex_start"  value="2.0" />
+  <xacro:property name="index_act_flex_start"  value="0.7" />
+  <xacro:property name="middle_act_flex_start" value="0.0" />
+  <xacro:property name="ring_act_flex_start"   value="0.75" />
+  <xacro:property name="little_act_flex_start" value="0.75" />
 
   <!--
     Create a complete hey5 hand (right or left).
@@ -50,20 +36,7 @@
       <insert_block name="origin" />
     </xacro:palm>
 
-    <!--Command sources-->
-<!--    <xacro:cmd_source parent="${name}_palm_link" name="${name}_thumb" >
-      <origin xyz="0.05 0 0" rpy="0 0 0" />
-    </xacro:cmd_source>
-
-    <xacro:cmd_source parent="${name}_palm_link" name="${name}_index" >
-      <origin xyz="0.05 0 0" rpy="0 0 0" />
-    </xacro:cmd_source>
-
-    <xacro:cmd_source parent="${name}_palm_link" name="${name}_mrl" >
-      <origin xyz="0.05 0 0" rpy="0 0 0" />
-    </xacro:cmd_source>-->
-
-    <!-- Actuators -->
+    <!--Actuators-->
     <xacro:thumb_actuator parent="${name}_palm_link" name="${name}_thumb">
       <origin xyz="0 0 0" rpy="0 0 0" /> <!-- TODO: Change! -->
     </xacro:thumb_actuator>
@@ -78,23 +51,23 @@
 
     <!--Fingers-->
     <!-- TODO: Add grasp hack? -->
-    <xacro:thumb parent="${name}_palm_link" name="${name}_thumb" reflect="${reflect}" mimic_source="${name}_thumb_joint">
+    <xacro:thumb parent="${name}_palm_link" name="${name}_thumb" reflect="${reflect}">
       <origin xyz="0.0911 0.0132 ${reflect * 0.038}" rpy="0 ${-reflect * 65 * deg_to_rad} 0" />
     </xacro:thumb>
 
-    <xacro:finger parent="${name}_palm_link" name="${name}_index" reflect="${reflect}" mimic_source="${name}_index_joint">
+    <xacro:finger parent="${name}_palm_link" name="${name}_index" reflect="${reflect}">
       <origin xyz="0.1265 0.00399 ${reflect * 0.0265}" rpy="${-reflect * 90 * deg_to_rad} ${-reflect * 15 * deg_to_rad} 0" />
     </xacro:finger>
 
-    <xacro:finger parent="${name}_palm_link" name="${name}_middle" reflect="${reflect}" mimic_source="${name}_mrl_joint">
+    <xacro:finger parent="${name}_palm_link" name="${name}_middle" reflect="${reflect}">
       <origin xyz="0.1335 0.00399 ${reflect * 0.007}" rpy="${-reflect * 90 * deg_to_rad} 0 0" />
     </xacro:finger>
 
-    <xacro:finger parent="${name}_palm_link" name="${name}_ring" reflect="${reflect}" mimic_source="${name}_mrl_joint">
+    <xacro:finger parent="${name}_palm_link" name="${name}_ring" reflect="${reflect}">
       <origin xyz="0.1265 0.00399 ${reflect * -0.0125}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 5 * deg_to_rad} 0" />
     </xacro:finger>
 
-    <xacro:finger parent="${name}_palm_link" name="${name}_little" reflect="${reflect}" mimic_source="${name}_mrl_joint">
+    <xacro:finger parent="${name}_palm_link" name="${name}_little" reflect="${reflect}">
       <origin xyz="0.1165 0.00399 ${reflect * -0.032}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 15 * deg_to_rad} 0" />
     </xacro:finger>
   </xacro:macro>

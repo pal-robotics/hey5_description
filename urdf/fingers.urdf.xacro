@@ -45,7 +45,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
     - origin: XML block containing the pose of the first finger joint with respect to its parent
   -->
-  <xacro:macro name="finger" params="name parent reflect *origin mimic_source">
+  <xacro:macro name="finger" params="name parent reflect *origin">
     <!--Abductor-->
     <xacro:finger_abd parent="${parent}" name="${name}_abd" reflect="${reflect}">
       <insert_block name="origin" />
@@ -54,34 +54,28 @@
     <!--First flexor-->
     <xacro:finger_flex_virtual parent="${name}_abd_link" name="${name}_virtual_1" reflect="${reflect}">
       <origin xyz="${finger_d1} 0 0" rpy="${reflect * 90 * deg_to_rad} 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex>
 
     <!--Second flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_1_link" name="${name}_virtual_2" reflect="${reflect}">
       <origin xyz="${finger_d1} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex parent="${name}_virtual_2_link" name="${name}_flex_2" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex>
 
     <!--Third flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_2_link" name="${name}_virtual_3" reflect="${reflect}">
       <origin xyz="${finger_d1} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex_tip parent="${name}_virtual_3_link" name="${name}_flex_3" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_tip>
   </xacro:macro>
 
@@ -95,7 +89,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand
     - origin: XML block containing the pose of the first finger joint with respect to its parent
   -->
-  <xacro:macro name="thumb" params="name parent reflect *origin mimic_source">
+  <xacro:macro name="thumb" params="name parent reflect *origin">
     <!--Abductor-->
     <xacro:thumb_abd parent="${parent}" name="${name}_abd" reflect="${reflect}">
       <insert_block name="origin" />
@@ -104,23 +98,19 @@
     <!--First flexor-->
     <xacro:finger_flex_virtual parent="${name}_abd_link" name="${name}_virtual_1" reflect="${reflect}">
       <origin xyz="${0.0355 - finger_d2} 0.0033 0" rpy="${-reflect * 65.56 * deg_to_rad} 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex>
 
     <!--Second flexor-->
     <xacro:finger_flex_virtual parent="${name}_flex_1_link" name="${name}_virtual_2" reflect="${reflect}">
       <origin xyz="${finger_d1} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex_tip parent="${name}_virtual_2_link" name="${name}_flex_2" reflect="${reflect}">
       <origin xyz="${finger_d2} 0 0" rpy="0 0 0" />
-      <mimic joint="${mimic_source}" multiplier="${finger_flex_max}" offset="0.0" />
     </xacro:finger_flex_tip>
   </xacro:macro>
 
@@ -218,7 +208,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
     - origin: XML block containing the pose of the joint with respect to its parent
   -->
-  <xacro:macro name="finger_flex_virtual" params="name parent reflect *origin *mimic" >
+  <xacro:macro name="finger_flex_virtual" params="name parent reflect *origin" >
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
@@ -226,7 +216,6 @@
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
-      <insert_block name="mimic" />
     </joint>
 
     <link name="${name}_link">
@@ -262,7 +251,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
     - origin: XML block containing the pose of the joint with respect to its parent
   -->
-  <xacro:macro name="finger_flex" params="name parent reflect *origin *mimic">
+  <xacro:macro name="finger_flex" params="name parent reflect *origin">
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
@@ -270,7 +259,6 @@
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
-      <insert_block name="mimic" />
     </joint>
 
     <link name="${name}_link">
@@ -307,7 +295,7 @@
     - reflect: Set to 1 for a right hand, or to -1 for a left hand (currently unused)
     - origin: XML block containing the pose of the joint with respect to its parent
   -->
-  <xacro:macro name="finger_flex_tip" params="name parent reflect *origin *mimic">
+  <xacro:macro name="finger_flex_tip" params="name parent reflect *origin">
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
@@ -315,7 +303,6 @@
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
-      <insert_block name="mimic" />
     </joint>
 
     <link name="${name}_link">
