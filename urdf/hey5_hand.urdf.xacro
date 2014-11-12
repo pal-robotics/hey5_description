@@ -13,6 +13,7 @@
   <xacro:include filename="$(find hey5_description)/urdf/deg_to_rad.urdf.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/fingers.urdf.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/palm.urdf.xacro" />
+  <xacro:include filename="$(find hey5_description)/urdf/transmissions.urdf.xacro" />
 
   <!--Constants-->
   <xacro:property name="thumb_act_flex_start"  value="2.0" />
@@ -70,6 +71,58 @@
     <xacro:finger parent="${name}_palm_link" name="${name}_little" reflect="${reflect}">
       <origin xyz="0.1165 0.00399 ${reflect * -0.032}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 15 * deg_to_rad} 0" />
     </xacro:finger>
+
+    <!--Transmissions-->
+    <xacro:thumb_transmissions
+      finger_name="${name}_thumb"
+      act_name="${name}_thumb_motor"
+      act_flex_start="${thumb_act_flex_start}"
+      jnt_abd_start="${0.0 * deg_to_rad}"
+      jnt_abd_stop="${90 * deg_to_rad}"
+      abd_reduction="${90 * deg_to_rad / thumb_act_flex_start}"
+      flex_reduction="${40 * deg_to_rad / (360 * deg_to_rad - thumb_act_flex_start)}"
+    />
+
+    <xacro:finger_transmissions
+      finger_name="${name}_index"
+      act_name="${name}_index_motor"
+      act_flex_start="${index_act_flex_start}"
+      jnt_abd_start="${0.0 * deg_to_rad}"
+      jnt_abd_stop="${15.0 * deg_to_rad}"
+      abd_reduction="${15.0 * deg_to_rad / index_act_flex_start}"
+      flex_reduction="${36 * deg_to_rad / (390 * deg_to_rad - index_act_flex_start)}"
+    />
+
+    <xacro:finger_transmissions
+      finger_name="${name}_middle"
+      act_name="${name}_mrl_motor"
+      act_flex_start="${middle_act_flex_start}"
+      jnt_abd_start="${0.0 * deg_to_rad}"
+      jnt_abd_stop="${0.0 * deg_to_rad}"
+      abd_reduction="1.0"
+      flex_reduction="${36 * deg_to_rad / (530 * deg_to_rad - middle_act_flex_start)}"
+    />
+
+    <xacro:finger_transmissions
+      finger_name="${name}_ring"
+      act_name="${name}_mrl_motor"
+      act_flex_start="${ring_act_flex_start}"
+      jnt_abd_start="${-2.5 * deg_to_rad}"
+      jnt_abd_stop="${0.0 * deg_to_rad}"
+      abd_reduction="${-2.5 * deg_to_rad / ring_act_flex_start}"
+      flex_reduction="${36 * deg_to_rad / (530 * deg_to_rad - ring_act_flex_start)}"
+    />
+
+    <xacro:finger_transmissions
+      finger_name="${name}_little"
+      act_name="${name}_mrl_motor"
+      act_flex_start="${little_act_flex_start}"
+      jnt_abd_start="${-5.0 * deg_to_rad}"
+      jnt_abd_stop="${0.0 * deg_to_rad}"
+      abd_reduction="${-5.0 * deg_to_rad / little_act_flex_start}"
+      flex_reduction="${36 * deg_to_rad / (530 * deg_to_rad - little_act_flex_start)}"
+    />
+
   </xacro:macro>
 </robot>
 
