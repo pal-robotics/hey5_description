@@ -10,8 +10,6 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<!-- TODO: Doc macros. Also doc created values. Applies also to finger macros. -->
-
   <!-- Thumb actuator -->
   <xacro:macro name="thumb_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
