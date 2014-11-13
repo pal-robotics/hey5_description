@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2014-11-13)
+------------------
 * Remove reference to non-existing file
 * Contributors: Adolfo Rodriguez Tsouroukdissian
 
