@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2014-11-13)
+------------------
 * Use transmissions in hand model
 * Remove usage of mimic joints
 * Contributors: Adolfo Rodriguez Tsouroukdissian
