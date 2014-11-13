@@ -12,7 +12,6 @@
 
   <!--External resources-->
   <xacro:include filename="$(find hey5_description)/urdf/deg_to_rad.urdf.xacro" />
-  <xacro:include filename="$(find hey5_description)/urdf/finger_params.urdf.xacro" />
 
   <!--
     Specify transmissions for the thumb finger.
