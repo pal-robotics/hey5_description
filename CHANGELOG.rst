@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove reference to non-existing file
+* Contributors: Adolfo Rodriguez Tsouroukdissian
+
 0.0.2 (2014-11-13)
 ------------------
 * Use transmissions in hand model
