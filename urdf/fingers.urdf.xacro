@@ -97,7 +97,7 @@
 
     <!--First flexor-->
     <xacro:finger_flex_virtual parent="${name}_abd_link" name="${name}_virtual_1" reflect="${reflect}">
-      <origin xyz="${0.0355 - finger_d2} 0.0033 0" rpy="${-reflect * 65.56 * deg_to_rad} 0 0" />
+      <origin xyz="${0.0355 - finger_d2} 0.003 0" rpy="${-reflect * 65.56 * deg_to_rad} 0 0" />
     </xacro:finger_flex_virtual>
 
     <xacro:finger_flex parent="${name}_virtual_1_link" name="${name}_flex_1" reflect="${reflect}">
