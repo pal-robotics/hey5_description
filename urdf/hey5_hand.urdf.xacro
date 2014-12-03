@@ -57,7 +57,7 @@
     </xacro:thumb>
 
     <xacro:finger parent="${name}_palm_link" name="${name}_index" reflect="${reflect}">
-      <origin xyz="0.1265 0.00399 ${reflect * 0.0265}" rpy="${-reflect * 90 * deg_to_rad} ${-reflect * 15 * deg_to_rad} 0" />
+      <origin xyz="0.1265 0.00399 ${reflect * 0.0265}" rpy="${-reflect * 90 * deg_to_rad} ${-reflect * 30 * deg_to_rad} 0" />
     </xacro:finger>
 
     <xacro:finger parent="${name}_palm_link" name="${name}_middle" reflect="${reflect}">
@@ -65,11 +65,11 @@
     </xacro:finger>
 
     <xacro:finger parent="${name}_palm_link" name="${name}_ring" reflect="${reflect}">
-      <origin xyz="0.1265 0.00399 ${reflect * -0.0125}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 5 * deg_to_rad} 0" />
+      <origin xyz="0.1265 0.00399 ${reflect * -0.0125}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 15 * deg_to_rad} 0" />
     </xacro:finger>
 
     <xacro:finger parent="${name}_palm_link" name="${name}_little" reflect="${reflect}">
-      <origin xyz="0.1165 0.00399 ${reflect * -0.032}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 15 * deg_to_rad} 0" />
+      <origin xyz="0.1165 0.00399 ${reflect * -0.032}" rpy="${-reflect * 90 * deg_to_rad} ${reflect * 30 * deg_to_rad} 0" />
     </xacro:finger>
 
     <!--Transmissions-->
@@ -79,7 +79,7 @@
       act_flex_start="${thumb_act_flex_start}"
       jnt_abd_start="${0.0 * deg_to_rad}"
       jnt_abd_stop="${90 * deg_to_rad}"
-      abd_reduction="${90 * deg_to_rad / thumb_act_flex_start}"
+      abd_reduction="${75 * deg_to_rad / thumb_act_flex_start}"
       flex_reduction="${40 * deg_to_rad / (360 * deg_to_rad - thumb_act_flex_start)}"
     />
 
@@ -88,8 +88,8 @@
       act_name="${name}_index_motor"
       act_flex_start="${index_act_flex_start}"
       jnt_abd_start="${0.0 * deg_to_rad}"
-      jnt_abd_stop="${15.0 * deg_to_rad}"
-      abd_reduction="${15.0 * deg_to_rad / index_act_flex_start}"
+      jnt_abd_stop="${30.0 * deg_to_rad}"
+      abd_reduction="${20.0 * deg_to_rad / index_act_flex_start}"
       flex_reduction="${36 * deg_to_rad / (390 * deg_to_rad - index_act_flex_start)}"
     />
 
@@ -107,9 +107,9 @@
       finger_name="${name}_ring"
       act_name="${name}_mrl_motor"
       act_flex_start="${ring_act_flex_start}"
-      jnt_abd_start="${-2.5 * deg_to_rad}"
+      jnt_abd_start="${-15.0 * deg_to_rad}"
       jnt_abd_stop="${0.0 * deg_to_rad}"
-      abd_reduction="${-2.5 * deg_to_rad / ring_act_flex_start}"
+      abd_reduction="${-10.0 * deg_to_rad / ring_act_flex_start}"
       flex_reduction="${36 * deg_to_rad / (530 * deg_to_rad - ring_act_flex_start)}"
     />
 
@@ -117,9 +117,9 @@
       finger_name="${name}_little"
       act_name="${name}_mrl_motor"
       act_flex_start="${little_act_flex_start}"
-      jnt_abd_start="${-5.0 * deg_to_rad}"
+      jnt_abd_start="${-30.0 * deg_to_rad}"
       jnt_abd_stop="${0.0 * deg_to_rad}"
-      abd_reduction="${-5.0 * deg_to_rad / little_act_flex_start}"
+      abd_reduction="${-20.0 * deg_to_rad / little_act_flex_start}"
       flex_reduction="${36 * deg_to_rad / (530 * deg_to_rad - little_act_flex_start)}"
     />
 
