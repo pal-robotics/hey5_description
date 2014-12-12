@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2014-12-12)
+------------------
 * Remove hi-res finger meshes
 * Minor dimension tweaks to harmonize with docs, CAD
 * Update hand transmissions, fully open config
