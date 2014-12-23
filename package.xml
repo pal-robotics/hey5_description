@@ -9,7 +9,7 @@
   </description>
   <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
   <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
-  <license>Creative Commons BY-NC-ND 3.0</license>
+  <license>Creative Commons Attribution 4.0 International License</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>xacro</run_depend>
