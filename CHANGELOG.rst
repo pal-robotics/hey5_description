@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.5 (2014-12-23)
+------------------
 * License model as CC-BY 4.0, add attribution text
 * Contributors: Adolfo Rodriguez Tsouroukdissian
 
