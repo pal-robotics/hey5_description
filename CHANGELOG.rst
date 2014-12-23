@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* License model as CC-BY 4.0, add attribution text
+* Contributors: Adolfo Rodriguez Tsouroukdissian
+
 0.0.4 (2014-12-12)
 ------------------
 * Remove hi-res finger meshes
