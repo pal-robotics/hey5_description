@@ -29,7 +29,8 @@
     <link name="${name}_link">
       <inertial>
         <origin xyz="0.0641 -0.0022 0.0021" rpy="0 0 0" />
-        <mass value="0.598" />
+        <!-- NOTE: Less than total palm mass of 0.598kg because actuator masses are specified separately -->
+        <mass value="0.4" />
         <inertia ixx="0.000305100" ixy="0.000005037" ixz="0.000015302"
                  iyy="0.000811920" iyz="0.000007622" izz="0.000655851" />
       </inertial>

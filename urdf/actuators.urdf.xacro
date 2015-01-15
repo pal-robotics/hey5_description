@@ -70,8 +70,8 @@
     <link name="${name}_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="0.05" /> <!--TODO: can we make it zero and still have a stable dynamic simulation?-->
-        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        <mass value="0.05" /> 
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!--To stabilize simulation-->
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />

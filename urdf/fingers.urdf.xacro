@@ -137,8 +137,7 @@
       <inertial>
         <origin xyz="-0.0018 0.0 0.0028" rpy="0 0 0" />
         <mass value="0.018" />
-        <inertia ixx="0.000000360" ixy="0.000000000" ixz="-0.000000059"
-                 iyy="0.000000808" iyz="0.000000000" izz="0.000000640" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -179,8 +178,7 @@
       <inertial>
         <origin xyz="-0.0132 0.0037 -0.0017" rpy="0 0 0" />
         <mass value="0.014" />
-        <inertia ixx="0.000000290" ixy="0.000000078" ixz="-0.000000035"
-                 iyy="0.000000995" iyz="-0.000000020" izz="0.000000955" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -222,7 +220,7 @@
       <inertial>
         <origin xyz="${finger_d2 / 2.0} 0 0" rpy="0 0 0" />
         <mass value="0.01" /> <!--TODO: can we make it zero and still have a stable dynamic simulation?-->
-        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
         <origin xyz="${finger_d2 / 2} 0 0" rpy="0 0 0" />
@@ -265,8 +263,7 @@
       <inertial>
         <origin xyz="0.0047 0.0031 0.0" rpy="0 0 0" />
         <mass value="0.009" />
-        <inertia ixx="0.000000143" ixy="0.000000007" ixz="0.000000000"
-                 iyy="0.000000228" iyz="0.000000000" izz="0.000000232" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -309,8 +306,7 @@
       <inertial>
         <origin xyz="0.0096 0.003 0.0" rpy="0 0 0" />
         <mass value="0.015" />
-        <inertia ixx="0.000000200" ixy="0.000000025" ixz="0.000000000"
-                 iyy="0.000000469" iyz="0.000000000" izz="0.000000494" />
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
