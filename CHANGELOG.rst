@@ -2,6 +2,16 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update hand inertial properties
+  - Inertia tensors for all links except palm are approximately four
+  orders of magnitude larger to prevent the Gazebo simulation from
+  becoming unstable.
+  - Palm mass is lower to take into account that actuator mass is
+  specified separately.
+* Contributors: Adolfo Rodriguez Tsouroukdissian
+
 0.0.5 (2014-12-23)
 ------------------
 * License model as CC-BY 4.0, add attribution text
