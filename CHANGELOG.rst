@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.6 (2015-01-15)
+------------------
 * Update hand inertial properties
   - Inertia tensors for all links except palm are approximately four
   orders of magnitude larger to prevent the Gazebo simulation from
