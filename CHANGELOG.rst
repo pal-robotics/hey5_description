@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add hand_grasping_frame
+* Contributors: Bence Magyar
+
 0.0.6 (2015-01-15)
 ------------------
 * Update hand inertial properties
