@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2015-04-22)
+------------------
 * Add hand_grasping_frame
 * Contributors: Bence Magyar
 
