@@ -153,6 +153,9 @@
         </geometry>
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
   <!--
@@ -194,6 +197,9 @@
         </geometry>
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
   <!--
@@ -236,6 +242,9 @@
         </geometry>
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
   <!--
@@ -279,6 +288,9 @@
         </geometry>
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
   <!--
@@ -322,6 +334,9 @@
         </geometry>
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
 </robot>
