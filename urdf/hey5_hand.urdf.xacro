@@ -14,6 +14,7 @@
   <xacro:include filename="$(find hey5_description)/urdf/fingers.urdf.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/palm.urdf.xacro" />
   <xacro:include filename="$(find hey5_description)/urdf/transmissions.urdf.xacro" />
+  <xacro:include filename="$(find hey5_description)/gazebo/gazebo.urdf.xacro" />
 
   <!--Constants-->
   <xacro:property name="thumb_act_flex_start"  value="2.0" />
@@ -131,6 +132,9 @@
       <axis xyz="0 0 1" />
       <origin xyz="0.13 0.02 0" rpy="0 0 0"/>
     </joint>
+
+    <!-- hey5 gazebo plugin -->
+    <xacro:hey5_gazebo_simulation side="${name}"/>
 
   </xacro:macro>
 </robot>
