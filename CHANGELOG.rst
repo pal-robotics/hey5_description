@@ -2,6 +2,12 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add hey5 gazebo simulation plugin
+* Add gazebo references with black material
+* Contributors: Bence Magyar, Luca Marchionni
+
 0.1.0 (2015-04-22)
 ------------------
 * Add hand_grasping_frame
