@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.2 (2015-06-12)
+------------------
 * hey5_description: Install gazebo folder
 * Contributors: Adolfo Rodriguez Tsouroukdissian
 
