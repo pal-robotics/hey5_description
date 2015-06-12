@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* hey5_description: Install gazebo folder
+* Contributors: Adolfo Rodriguez Tsouroukdissian
+
 0.1.1 (2015-06-12)
 ------------------
 * Add hey5 gazebo simulation plugin
