@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2015-06-12)
+------------------
 * Add hey5 gazebo simulation plugin
 * Add gazebo references with black material
 * Contributors: Bence Magyar, Luca Marchionni
