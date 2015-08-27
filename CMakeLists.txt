@@ -8,3 +8,8 @@ foreach(dir config gazebo launch meshes robots urdf)
   install(DIRECTORY ${dir}/
           DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+
+
+install(FILES LICENSE.txt
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
