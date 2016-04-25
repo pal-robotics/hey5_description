@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.3 (2016-04-25)
+------------------
 * Fix error on loading stil by Rviz as they seem to be malformed
   Error was
   The STL file 'package://XXXX/meshes/finger_flex_collision.stl' is malformed. According to the binary STL header it should have '108' triangles, but it has too much data for that to be the case.
