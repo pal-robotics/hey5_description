@@ -2,6 +2,16 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix error on loading stil by Rviz as they seem to be malformed
+  Error was
+  The STL file 'package://XXXX/meshes/finger_flex_collision.stl' is malformed. According to the binary STL header it should have '108' triangles, but it has too much data for that to be the case.
+  Seems to be fixed in upcoming Rviz (not released yet) https://github.com/ros-visualization/rviz/issues/913
+* Install LICENSE.txt
+* Change URDF license headers to CC BY 4.0.
+* Contributors: Adolfo Rodriguez Tsouroukdissian, Sam Pfeiffer
+
 0.1.2 (2015-06-12)
 ------------------
 * hey5_description: Install gazebo folder
