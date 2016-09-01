@@ -2,6 +2,9 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.1.3 (2016-04-25)
 ------------------
 * Fix error on loading stil by Rviz as they seem to be malformed
