@@ -10,7 +10,6 @@
 -->
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-
    <xacro:macro name="hey5_gazebo_simulation" params="side">
    <gazebo>
     <plugin filename="libgazebo_underactuated_finger.so" name="gazebo_${side}_thumb">
@@ -35,6 +34,9 @@
         <name>${side}_thumb_virtual_2_joint</name>
         <scale_factor>3.0</scale_factor>
       </virtualJoint>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
 
     <plugin filename="libgazebo_underactuated_finger.so" name="gazebo_${side}_index">
@@ -63,6 +65,9 @@
         <name>${side}_index_flex_3_joint</name>
         <scale_factor>4.0</scale_factor>
       </virtualJoint>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
 
 
@@ -88,6 +93,9 @@
         <name>${side}_middle_flex_3_joint</name>
         <scale_factor>4.0</scale_factor>
       </virtualJoint>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
 
     <plugin filename="libgazebo_underactuated_finger.so" name="gazebo_${side}_ring">
@@ -112,6 +120,9 @@
         <name>${side}_ring_flex_3_joint</name>
         <scale_factor>4.0</scale_factor>
       </virtualJoint>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
 
     <plugin filename="libgazebo_underactuated_finger.so" name="gazebo_${side}_little">
@@ -136,6 +147,9 @@
         <name>${side}_little_flex_3_joint</name>
         <scale_factor>4.0</scale_factor>
       </virtualJoint>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
   </gazebo>
  </xacro:macro>
