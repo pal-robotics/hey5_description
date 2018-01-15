@@ -2,6 +2,19 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-reemc' into 'master'
+  Fix hey5 hand for REEM-C robot
+  See merge request !2
+* Fix hay5 hand for REEM-C robot
+* Merge branch 'multiple-tiagos' into 'master'
+  Allow multiple Tiagos on Gazebo
+  See merge request !1
+* Allow multiple Tiagos on Gazebo
+  Refs #15402
+* Contributors: David Fernandez, Hilario Tome, Victor Lopez, davidfernandez
+
 1.0.0 (2016-09-01)
 ------------------
 
