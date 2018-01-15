@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.1 (2018-01-15)
+------------------
 * Merge branch 'fix-reemc' into 'master'
   Fix hey5 hand for REEM-C robot
   See merge request !2
