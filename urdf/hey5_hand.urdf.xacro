@@ -33,6 +33,23 @@
     - origin: XML block containing the pose of the palm link with respect to its parent
   -->
   <xacro:macro name="hey5_hand" params="name parent reflect *origin">
+  <!-- Tool Link -->
+    <link name="${name}_tool_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0.0001" />
+        <inertia ixx="0.00001" ixy="0.0" ixz="0.0"
+                 iyy="0.00001" iyz="0.0"
+                 izz="0.00001" />
+      </inertial>
+    </link>
+
+    <joint name="${name}_tool_joint" type="fixed">
+      <insert_block name="origin"/>
+      <parent link="${parent}" />
+      <child link="${name}_tool_link" />
+       <axis xyz="0 0 0" />
+    </joint>
     <!--Palm-->
     <xacro:palm parent="${parent}" name="${name}_palm" reflect="${reflect}" >
       <insert_block name="origin" />
