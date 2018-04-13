@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.2 (2018-04-13)
+------------------
 * Merge branch 'add-tool-link' into 'master'
   Add hand_tool_link
   See merge request robots/hey5_description!3
