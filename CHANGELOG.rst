@@ -2,6 +2,14 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add-tool-link' into 'master'
+  Add hand_tool_link
+  See merge request robots/hey5_description!3
+* Add hand_tool_link
+* Contributors: Hilario Tome, Victor Lopez
+
 1.0.1 (2018-01-15)
 ------------------
 * Merge branch 'fix-reemc' into 'master'
