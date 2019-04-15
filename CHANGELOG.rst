@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.3 (2019-04-15)
+------------------
 * Fix xacro warnings
 * Contributors: Victor Lopez
 
