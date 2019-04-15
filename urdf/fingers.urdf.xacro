@@ -48,7 +48,7 @@
   <xacro:macro name="finger" params="name parent reflect *origin">
     <!--Abductor-->
     <xacro:finger_abd parent="${parent}" name="${name}_abd" reflect="${reflect}">
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
     </xacro:finger_abd>
 
     <!--First flexor-->
@@ -92,7 +92,7 @@
   <xacro:macro name="thumb" params="name parent reflect *origin">
     <!--Abductor-->
     <xacro:thumb_abd parent="${parent}" name="${name}_abd" reflect="${reflect}">
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
     </xacro:thumb_abd>
 
     <!--First flexor-->
@@ -127,7 +127,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <limit lower="${finger_abd_min}" upper="${finger_abd_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
@@ -171,7 +171,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <limit lower="${thumb_abd_min}" upper="${thumb_abd_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
@@ -216,7 +216,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
@@ -262,7 +262,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>
@@ -308,7 +308,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <limit lower="${finger_flex_min}" upper="${finger_flex_max}" effort="${finger_max_eff}" velocity="${finger_max_vel}" />
       <dynamics friction="${finger_friction}" damping="${finger_damping}"/>

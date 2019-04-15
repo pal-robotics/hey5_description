@@ -13,7 +13,7 @@
   <!-- Thumb actuator -->
   <xacro:macro name="thumb_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <limit lower="${-150 * deg_to_rad}" upper="${360 * deg_to_rad}" effort="2.0" velocity="3.35" /> <!-- TODO: Tune effort -->
       <safety_controller k_position="20"
                          k_velocity="20"
@@ -25,7 +25,7 @@
   <!-- Index actuator -->
   <xacro:macro name="index_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <limit lower="${-175 * deg_to_rad}" upper="${390 * deg_to_rad}" effort="2.0" velocity="3.35" /> <!-- TODO: Tune effort -->
       <safety_controller k_position="20"
                          k_velocity="20"
@@ -37,7 +37,7 @@
   <!-- Middle, ring, little (mrl) actuator -->
   <xacro:macro name="mrl_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <limit lower="${-145 * deg_to_rad}" upper="${530 * deg_to_rad}" effort="2.0" velocity="3.56" /> <!-- TODO: Tune effort -->
       <safety_controller k_position="20"
                          k_velocity="20"
@@ -60,11 +60,11 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_link" />
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
-      <insert_block name="limit" />
+      <xacro:insert_block name="limit" />
       <dynamics friction="0.0" damping="0.5"/> <!-- TODO: Tune -->
-      <insert_block name="safety_controller" />
+      <xacro:insert_block name="safety_controller" />
     </joint>
 
     <link name="${name}_link">

@@ -45,14 +45,14 @@
     </link>
 
     <joint name="${name}_tool_joint" type="fixed">
-      <insert_block name="origin"/>
+      <xacro:insert_block name="origin"/>
       <parent link="${parent}" />
       <child link="${name}_tool_link" />
        <axis xyz="0 0 0" />
     </joint>
     <!--Palm-->
     <xacro:palm parent="${parent}" name="${name}_palm" reflect="${reflect}" >
-      <insert_block name="origin" />
+      <xacro:insert_block name="origin" />
     </xacro:palm>
 
     <!--Actuators-->
