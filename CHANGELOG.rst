@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix xacro warnings
+* Contributors: Victor Lopez
+
 1.0.2 (2018-04-13)
 ------------------
 * Merge branch 'add-tool-link' into 'master'
