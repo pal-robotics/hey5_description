@@ -14,7 +14,7 @@
   <xacro:macro name="thumb_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
       <xacro:insert_block name="origin" />
-      <limit lower="${-150 * deg_to_rad}" upper="${360 * deg_to_rad}" effort="2.0" velocity="3.35" /> <!-- TODO: Tune effort -->
+      <limit lower="${-150 * deg_to_rad}" upper="${360 * deg_to_rad}" effort="2.0" velocity="3.35" />
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${-150.0 * deg_to_rad}"
@@ -26,7 +26,7 @@
   <xacro:macro name="index_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
       <xacro:insert_block name="origin" />
-      <limit lower="${-175 * deg_to_rad}" upper="${390 * deg_to_rad}" effort="2.0" velocity="3.35" /> <!-- TODO: Tune effort -->
+      <limit lower="${-175 * deg_to_rad}" upper="${390 * deg_to_rad}" effort="2.0" velocity="3.35" />
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${-175.0 * deg_to_rad}"
@@ -38,7 +38,7 @@
   <xacro:macro name="mrl_actuator" params="name parent *origin">
     <xacro:actuator_impl parent="${parent}" name="${name}">
       <xacro:insert_block name="origin" />
-      <limit lower="${-145 * deg_to_rad}" upper="${530 * deg_to_rad}" effort="2.0" velocity="3.56" /> <!-- TODO: Tune effort -->
+      <limit lower="${-145 * deg_to_rad}" upper="${530 * deg_to_rad}" effort="2.0" velocity="3.56" />
       <safety_controller k_position="20"
                          k_velocity="20"
                          soft_lower_limit="${-145 * deg_to_rad}"
@@ -63,14 +63,14 @@
       <xacro:insert_block name="origin" />
       <axis xyz="0 0 1" />
       <xacro:insert_block name="limit" />
-      <dynamics friction="0.0" damping="0.5"/> <!-- TODO: Tune -->
+      <dynamics friction="0.0" damping="0.5"/>
       <xacro:insert_block name="safety_controller" />
     </joint>
 
     <link name="${name}_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="0.05" /> 
+        <mass value="0.05" />
         <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!--To stabilize simulation-->
       </inertial>
       <visual>

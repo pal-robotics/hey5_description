@@ -17,14 +17,14 @@
   <!--Constants-->
   <xacro:property name="thumb_abd_min"   value="${  0 * deg_to_rad}" />
   <xacro:property name="thumb_abd_max"   value="${ 90 * deg_to_rad}" />
-  <xacro:property name="finger_abd_min"  value="${-30 * deg_to_rad}" /> <!--TODO: Check-->
-  <xacro:property name="finger_abd_max"  value="${ 30 * deg_to_rad}" /> <!--TODO: Check-->
+  <xacro:property name="finger_abd_min"  value="${-30 * deg_to_rad}" />
+  <xacro:property name="finger_abd_max"  value="${ 30 * deg_to_rad}" />
   <xacro:property name="finger_flex_min" value="${  0 * deg_to_rad}" />
   <xacro:property name="finger_flex_max" value="${ 45 * deg_to_rad}" />
-  <xacro:property name="finger_max_vel"  value="2.0" />                 <!--TODO: Check-->
-  <xacro:property name="finger_max_eff"  value="2.0" />                 <!--TODO: Check-->
-  <xacro:property name="finger_friction" value="0.0" />                 <!--TODO: Check-->
-  <xacro:property name="finger_damping"  value="0.5" />                 <!--TODO: Check-->
+  <xacro:property name="finger_max_vel"  value="2.0" />
+  <xacro:property name="finger_max_eff"  value="2.0" />
+  <xacro:property name="finger_friction" value="0.0" />
+  <xacro:property name="finger_damping"  value="0.5" />
 
   <xacro:property name="finger_d1"  value="0.009" />
   <xacro:property name="finger_d2"  value="0.013" />
@@ -225,7 +225,7 @@
     <link name="${name}_link">
       <inertial>
         <origin xyz="${finger_d2 / 2.0} 0 0" rpy="0 0 0" />
-        <mass value="0.01" /> <!--TODO: can we make it zero and still have a stable dynamic simulation?-->
+        <mass value="0.01" />
         <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" /> <!-- To stabilize simulation -->
       </inertial>
       <visual>
