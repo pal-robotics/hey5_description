@@ -1,15 +1,7 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.4.0)
 project(hey5_description)
 
-find_package(catkin REQUIRED)
-catkin_package()
+find_package(ament_cmake_auto REQUIRED)
 
-foreach(dir config gazebo launch meshes robots urdf)
-  install(DIRECTORY ${dir}/
-          DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
-endforeach(dir)
-
-
-install(FILES LICENSE.txt
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+# @TODO LICENSE.txt needs to be installed too
+ament_auto_package(INSTALL_TO_SHARE config gazebo launch meshes robots urdf)
