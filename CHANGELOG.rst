@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.0 (2022-10-26)
+------------------
 * Merge branch 'linters' into 'humble-devel'
   add linters
   See merge request robots/hey5_description!7
