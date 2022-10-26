@@ -2,6 +2,32 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'linters' into 'humble-devel'
+  add linters
+  See merge request robots/hey5_description!7
+* CONTRIBUTING.md
+* add linters
+* Merge branch 'update_copyright' into 'humble-devel'
+  update copyright and license
+  See merge request robots/hey5_description!6
+* restore original LICENSE
+* rename LICENSE
+* update copyright and license
+* Merge branch 'update_maintainers' into 'humble-devel'
+  update maintainers
+  See merge request robots/hey5_description!5
+* update maintainers
+* Merge branch 'migrate_gazebo_plugin_underactuated_finger' into 'foxy-devel'
+  Migrate gazebo plugin underactuated finger
+  See merge request robots/hey5_description!4
+* change pid gains values
+* add pid_gains to urdf
+* Remove comments to workaround https://github.com/ros2/launch_ros/issues/214
+* package.xml and CMakeLists.txt in ros2 format
+* Contributors: Jordan Palacios, Noel Jimenez, cescfolch, victor
+
 1.0.3 (2019-04-15)
 ------------------
 * Fix xacro warnings
