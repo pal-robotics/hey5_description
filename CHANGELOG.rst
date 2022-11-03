@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.1 (2022-11-03)
+------------------
 * Merge branch 'fix_dependency' into 'humble-devel'
   fix buildtool dependency
   See merge request robots/hey5_description!8
