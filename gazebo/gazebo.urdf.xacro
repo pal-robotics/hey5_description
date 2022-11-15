@@ -80,7 +80,7 @@ limitations under the License.
 	</pid_gains>
       </virtualJoint>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
 
@@ -153,7 +153,7 @@ limitations under the License.
 	</pid_gains>
       </virtualJoint>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
 
@@ -216,7 +216,7 @@ limitations under the License.
 	</pid_gains>
       </virtualJoint>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
 
@@ -278,7 +278,7 @@ limitations under the License.
 	</pid_gains>
       </virtualJoint>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
 
@@ -340,7 +340,7 @@ limitations under the License.
 	</pid_gains>
       </virtualJoint>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
   </gazebo>
