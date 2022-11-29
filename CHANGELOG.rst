@@ -2,6 +2,14 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rename_namespace' into 'humble-devel'
+  rename namespace for gazebo plugin
+  See merge request robots/hey5_description!9
+* rename namespace for gazebo plugin
+* Contributors: Jordan Palacios, Noel Jimenez
+
 3.0.1 (2022-11-03)
 ------------------
 * Merge branch 'fix_dependency' into 'humble-devel'
