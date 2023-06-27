@@ -94,20 +94,5 @@ limitations under the License.
         </geometry>
       </collision>
     </link>
-
-    <xacro:position_reducer name="${name}" reduction="1.0"/>
-  </xacro:macro>
-
- <!-- Position joint reducer -->
-  <xacro:macro name="position_reducer" params="name reduction" >
-    <transmission name="${name}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_motor" >
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuator>
-      <joint name="${name}_joint" >
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      </joint>
-    </transmission>
   </xacro:macro>
 </robot>
