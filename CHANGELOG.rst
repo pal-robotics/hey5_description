@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.3 (2023-06-27)
+------------------
 * create hey5 ros2_control and transmission xacro files
 * Contributors: Noel Jimenez
 
