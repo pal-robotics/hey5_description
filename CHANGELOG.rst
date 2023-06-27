@@ -2,6 +2,11 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* create hey5 ros2_control and transmission xacro files
+* Contributors: Noel Jimenez
+
 3.0.2 (2022-11-29)
 ------------------
 * Merge branch 'rename_namespace' into 'humble-devel'
