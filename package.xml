@@ -12,6 +12,8 @@
   <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
   <license>Apache License 2.0</license>
 
+  <url type="website">https://github.com/pal-robotics/tiago_simulation</url>
+
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <exec_depend>xacro</exec_depend>
