@@ -2,8 +2,8 @@
 Changelog for package hey5_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.4 (2023-11-14)
+------------------
 * Add website tag
 * Contributors: Noel Jimenez
 
